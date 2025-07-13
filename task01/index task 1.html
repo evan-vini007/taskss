@@ -1,0 +1,165 @@
+ 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CODTECH Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "CODTECH CODTECH CODTECH CODTECH ";
+      font-size: 5rem;
+      color: rgba(255, 255, 255, 0.02);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 100%;
+      white-space: pre;
+      animation: scroll-bg 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes scroll-bg {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00c6ff;
+      z-index: 1;
+      position: relative;
+      text-shadow: 0 0 10px #00c6ff;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      margin: 1rem auto;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      z-index: 1;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 0.5rem;
+      color: #00c6ff;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .contact button {
+      padding: 0.7rem 1.2rem;
+      background: #00c6ff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+    }
+
+    .contact button:hover {
+      background: #007acc;
+      color: #fff;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #00c6ff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .resume-btn:hover {
+      background: #007acc;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <header>Hlo this is CODTECH</header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>I am CODTECH, a creative web developer passionate about building digital dreams. From interactive forms to full websites, I blend code and design to create amazing user experiences.</p>
+    <a href="#" class="resume-btn">Download Resume</a>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML - Structuring beautiful content</li>
+      <li>CSS - Stylish and responsive design</li>
+      <li>JavaScript - Making websites interactive</li>
+      <li>GitHub - Sharing and collaborating on code</li>
+      <li>Responsive Design - Mobile-friendly magic</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Login & Register Page:</strong> Simple forms with validation</li>
+      <li><strong>Mini Portfolio Website:</strong> Single-page responsive site</li>
+      <li><strong>JS Calculator App:</strong> Functional and stylish calculator</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      alert(`Thanks ${name}! Your message has been received.\nEmail: ${email}\nMessage: ${message}`);
+    }
+  </script>
+</body>
+</html>

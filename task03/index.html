@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Real-Time Collaboration</title>
+  <style>
+    #editor { width: 100%; height: 300px; }
+    #users { margin-top: 10px; padding: 5px; background: #f0f0f0; }
+  </style>
+</head>
+<body>
+  <h2>Real-Time Collaborative Editor</h2>
+  <textarea id="editor" placeholder="Start typing..."></textarea>
+  <div id="users"><strong>Online Users:</strong> <span id="userList"></span></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
